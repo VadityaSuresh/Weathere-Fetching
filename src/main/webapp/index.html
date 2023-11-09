@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WeatherApp</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('background-image.jpg'); /* Add your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        #a {
+            height: 200px;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
+            filter: drop-shadow(10px 10px 10px black);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #b {
+            color: red;
+            text-shadow: 2px 2px 2px gold;
+            font-size: 30px;
+            font-weight: 100;
+        }
+
+        #searchButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #searchButton:hover {
+            background-color: #45a049;
+        }
+
+        .searchInput {
+            display: flex;
+            align-items: center;
+        }
+
+        #searchInput {
+            border: 1px solid black;
+            background-color: rgb(225, 226, 221);
+            border-radius: 10px 0 0 10px;
+            padding: 10px;
+            width: 70%;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <center><h1 id="b">Welcome to the Weather Web App</h1></center>
+    <div id="a">
+        <br><br><br><br>
+        
+        <form action="MyServlet" method="post" class="searchInput">
+            <input type="text" placeholder="Enter City Name" id="searchInput" name="city"/>
+            <button id="searchButton" type="submit"><i class="fa fa-search"></i> Search</button>
+        </form>
+    </div>  
+</center>
+<div id="footer">
+    <p>Build by Vaditya Suresh</p>
+    <p>Technologies used: Java Servlets, HTML, CSS, JavaScript, External API</p>
+</div>
+</body>
+</html>
